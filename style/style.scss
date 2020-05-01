@@ -1,0 +1,28 @@
+//colors
+
+$green: #68b738;
+$jumbotron-gray: #f2f2f2;
+$text-black: #111111;
+$text-gray: #444444;
+
+//general styles
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+img{
+  max-width: 100%;
+}
+
+//header style
+
+.page-header{
+  width: 100vw;
+  
+}
