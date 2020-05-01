@@ -1,9 +1,22 @@
-//colors
+//variables
 
+$small:  16px;
+$medium: 20px;
+$desktop-big: 60px;
+$mobile-big: 36px;
 $green: #68b738;
 $jumbotron-gray: #f2f2f2;
 $text-black: #111111;
 $text-gray: #444444;
+$text-white: #eee;
+
+//mixins
+
+@mixin flex($jc, $ai) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
 
 //general styles
 
@@ -16,13 +29,143 @@ $text-gray: #444444;
   list-style: none;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 img{
   max-width: 100%;
 }
 
+.button{
+  display: inline-block;
+}
 //header style
 
 .page-header{
   width: 100vw;
-  
+  .main-nav{
+    width: 90%;
+    min-height: 4rem;
+    margin: auto;
+    position: relative;
+    @include flex(space-between, center);
+    &__logo{
+      width: 50%;
+      @include flex(space-between, center);
+      &-img{
+        width: 60px;
+      }
+    }
+    &__list{
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      right: 0;
+      width: 180px;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      @include flex(center, flex-start);
+      flex-direction: column;
+      display: none;
+      li{
+        padding: 30px 10px;
+        width: 100%;
+      }
+    }
+    &__links{
+      @include flex(center, center)
+      width: 100%;
+      height: 2*$medium;
+      background-color: rgba(0, 0, 0, 0.2);
+      color: $text-white;
+    }
+    &__toggle{
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      z-index: 100;
+      top: calc((100% - 40px)/2);
+      right: 0;
+      border: 0;
+      background-color: initial;
+      @include flex(center, center);
+      span{
+        width: 80%;
+        height: 5px;
+        position: relative;
+        transition: 0.6s;
+        background-color: $text-black;
+        &::before,
+        &::after{
+          content: '';
+          width: 100%;
+          height: 5px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: $text-black;
+          transition: 0.6s;
+        }
+        &::after{
+          transform: translateY(10px);
+        }
+        &::before{
+          transform: translateY(-10px);
+        }
+      }
+      &.active{
+        span{
+          transform: rotate(45deg);
+          background-color: $text-white;
+          &::before,
+          &::after{
+            transform: translateY(0);
+            background-color: $text-white;
+            transform-origin: center;
+          }
+          &::after{
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+  .section{
+    width: 100%;
+    &__content{
+      padding: 10%;
+      width: 100vw;
+      min-height: 95vw;
+      text-align: center;
+      margin-bottom: 50%;
+      background: url(../img/index-background-desktop.jpg) no-repeat center center/cover;
+      color: $text-white;
+      position: relative;
+      padding-bottom: 50%;
+      h2{
+        font-size: $mobile-big;
+      }
+      p{
+        font-size: $medium;
+        margin-top: 1rem;
+      }
+    }
+    &__img{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+    &__button{
+      @include flex(center, center);
+      width: 90%;
+      margin: auto;
+      padding: 10px 15px;
+      background-color: $green;
+      color: $text-white;
+      font-size: $medium;
+      font-weight: bold;
+    }
+  }
 }
