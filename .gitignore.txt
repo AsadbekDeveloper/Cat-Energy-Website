@@ -1,1 +1,4 @@
-*.css
+style/style.css
+style/style.css.map
+preview/
+psd/
