@@ -11,6 +11,7 @@ $text-gray: #444444;
 $text-white: #eee;
 $text-light-gray: #d9d9d9; 
 $gray: #f2f2f2;
+$example-border: #cdcdcd;
 
 //mixins
 
@@ -241,6 +242,68 @@ img{
       p{
         width: 80%;
       }
+    }
+  }
+}
+
+//Live example
+
+.examples{
+  width: 100vw;
+  padding: 5vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 40px;
+  background-color: $text-light-gray;
+  .content{
+    h2{
+      font-size: $mobile-big;
+      margin: 40px 0;
+    }
+    &>p{
+      font-size: $small;
+      margin-bottom: 30px;
+    }
+    .counting{
+      width: 90%;
+      @include flex(space-between, center);
+      margin-bottom: 30px;
+      div{
+        width: 45%;
+        border: 1px solid $example-border;
+        border-radius: 4px;
+        position: relative;
+        @include flex(center, center);
+        padding: 5vw;
+        p{
+          position: absolute;
+          width: 80%;
+          text-align: center;
+          left: 50%;
+          bottom: 0;
+          transform: translate(-50%, 50%);
+          background-color: $text-light-gray;
+        }
+      }
+    }
+    .money{
+      @extend .counting;
+      justify-content: flex-start;
+      padding: 2vw;
+      margin: 0;
+      h3{
+        margin-right: 15vw;
+      }
+    }
+  }
+  .form{
+    @include flex(center, center);
+    flex-direction: column;
+    img{
+      width: 100%;
+    }
+    label{
+      margin: 30px 0;
     }
   }
 }
