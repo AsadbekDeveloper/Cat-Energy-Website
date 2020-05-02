@@ -9,6 +9,8 @@ $jumbotron-gray: #f2f2f2;
 $text-black: #111111;
 $text-gray: #444444;
 $text-white: #eee;
+$text-light-gray: #d9d9d9; 
+$gray: #f2f2f2;
 
 //mixins
 
@@ -167,5 +169,46 @@ img{
       font-size: $medium;
       font-weight: bold;
     }
+  }
+}
+
+//Advertisement section
+
+.ads{
+  width: 100vw;
+  padding: 5vw;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 20px;
+  &__ad{
+    background-color: $gray;
+    padding: 8vw;
+    .ad__img{
+      @include flex(center, center);
+      width: 50/320*100vw;
+      height: 50/320*100vw;
+      border-radius: 50%;
+      background-color: $green;
+      position: relative;
+      img{
+        max-width: 67/320*100vw;
+        max-height: 47/320*100vw;
+      }
+    }
+    .ad__title{
+      position: absolute;
+      left: 200%;
+      font-size: 1.5rem;
+    }
+  }
+  p{
+    padding: 5% 0;
+    border-bottom: 1px solid $text-light-gray;
+  }
+  .ad__link{
+    display: block;
+    padding: 5% 0 0 0;
+    color: $text-black;
+    font-weight: 600;
   }
 }
