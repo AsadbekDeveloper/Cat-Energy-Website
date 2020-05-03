@@ -196,6 +196,10 @@ img {
           transform: translate(-50%, 50%);
 }
 
+.page-header .section__img img {
+  width: 100%;
+}
+
 .page-header .section__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -419,6 +423,19 @@ img {
 
 .examples .form label {
   margin: 30px 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.examples .form label input {
+  margin: 0 10px;
 }
 
 .address {
