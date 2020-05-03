@@ -16,10 +16,6 @@ img {
   max-width: 100%;
 }
 
-.button {
-  display: inline-block;
-}
-
 .page-header {
   width: 100vw;
 }
@@ -41,7 +37,7 @@ img {
 }
 
 .page-header .main-nav__logo {
-  width: 50%;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,6 +103,7 @@ img {
   height: 40px;
   position: absolute;
   z-index: 100;
+  cursor: pointer;
   top: calc((100% - 40px)/2);
   right: 0;
   border: 0;
@@ -172,20 +169,14 @@ img {
           transform: rotate(90deg);
 }
 
-.page-header .section {
-  width: 100%;
-}
-
 .page-header .section__content {
   padding: 10%;
-  width: 100vw;
-  min-height: 95vw;
   text-align: center;
   margin-bottom: 50%;
   background: url(../img/index-background-desktop.jpg) no-repeat center center/cover;
   color: #eee;
   position: relative;
-  padding-bottom: 50%;
+  padding-bottom: 60%;
 }
 
 .page-header .section__content h2 {
@@ -225,7 +216,6 @@ img {
 }
 
 .ads {
-  width: 100vw;
   padding: 5vw;
   display: -ms-grid;
   display: grid;
@@ -355,7 +345,6 @@ img {
 }
 
 .examples .content .counting, .examples .content .money {
-  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -369,7 +358,7 @@ img {
 }
 
 .examples .content .counting div, .examples .content .money div {
-  width: 45%;
+  width: 35%;
   border: 1px solid #cdcdcd;
   border-radius: 4px;
   position: relative;
@@ -397,9 +386,9 @@ img {
 }
 
 .examples .content .money {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 2vw;
   margin: 0;
 }
@@ -439,7 +428,6 @@ img {
 }
 
 .address__content {
-  width: 100%;
   height: 25%;
   background-color: #eee;
   display: -webkit-box;
@@ -485,19 +473,19 @@ footer {
   color: #444444;
 }
 
-footer h2 {
+footer > * {
   width: 90%;
   margin: auto;
-  font-size: 36px;
-  padding: 35px 0;
   border-bottom: 1px solid #d9d9d9;
 }
 
+footer h2 {
+  font-size: 36px;
+  padding: 35px 0;
+}
+
 footer .social {
-  width: 90%;
-  margin: auto;
   padding: 30px 25%;
-  border-bottom: 1px solid #d9d9d9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -509,14 +497,26 @@ footer .social {
           align-items: center;
 }
 
+footer .social a {
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 footer .social img {
   max-width: 30px;
   max-height: 22px;
 }
 
 footer .logo {
-  width: 90%;
-  margin: auto;
   padding: 30px 5%;
   display: -webkit-box;
   display: -ms-flexbox;
