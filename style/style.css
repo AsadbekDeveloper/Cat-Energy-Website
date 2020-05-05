@@ -200,7 +200,7 @@ img {
 .page-header .main-nav__toggle.active {
   position: fixed;
   top: calc(2rem - 20px);
-  right: calc(5vw - 20px);
+  right: calc(5vw);
 }
 
 .page-header .main-nav__toggle.active span {
@@ -226,7 +226,7 @@ img {
   padding: 10%;
   text-align: center;
   margin-bottom: 50%;
-  background: url(../img/index-background-desktop.jpg) no-repeat center center/cover;
+  background: #68b738 url(../img/index-background-desktop.jpg) no-repeat center center/cover;
   color: #eee;
   position: relative;
   padding-bottom: 60%;
@@ -270,6 +270,13 @@ img {
   color: #eee;
   font-size: 20px;
   font-weight: bold;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.page-header .section__button:hover, .page-header .section__button:active {
+  background-color: #5eaa2f;
+  color: #d9d9d9;
 }
 
 .ads {
@@ -493,7 +500,7 @@ img {
 
 .address {
   width: 100vw;
-  height: 400px;
+  min-height: 400px;
   position: relative;
 }
 
@@ -526,6 +533,7 @@ img {
 }
 
 .address__map .map {
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -581,7 +589,14 @@ footer .social a {
           align-items: center;
 }
 
+footer .social a:hover img, footer .social a:active img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
 footer .social img {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   max-width: 30px;
   max-height: 22px;
 }
