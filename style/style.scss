@@ -167,6 +167,7 @@ img{
     }
   }
   .section{
+    position: relative;
     &__content{
       padding: 10%;
       text-align: center;
@@ -422,6 +423,75 @@ footer{
     @include flex();
     img{
       width: 30px;
+    }
+  }
+}
+
+//Media queries for tablet version
+
+@media (min-width: 600px){
+  .page-header{
+    .main-nav{
+      &__logo{
+        width: auto;
+      }
+      &__list{
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        transform: translate(0);
+        opacity: 1;
+        background-color: transparent;
+        width: 60%;
+        height: auto;
+        li{
+          padding: 0;
+          width: auto;
+        }
+      }
+      &__links{
+        color: $text-black;
+        background-color: transparent;
+      }
+      button{
+        display: none;
+      }
+    }
+    .section{
+      &__content{
+        background: transparent;
+        color: $text-black;
+        padding-bottom: 40%;
+      }
+      &__button{
+        width: 35%;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &__img{
+        z-index: -1;
+        bottom: 0;
+        width: 90%;
+        max-width: 700px;
+      }
+    }
+  }
+  .advantages{
+    .wrap{
+      grid-template-columns: 1fr 1fr;
+      .advantage{
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 10px;
+        &__img{
+          margin-bottom: 20px;
+        }
+        p{
+          width: auto;
+        }
+      }
     }
   }
 }
