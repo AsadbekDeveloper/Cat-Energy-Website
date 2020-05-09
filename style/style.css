@@ -639,12 +639,15 @@ footer .logo img {
             transform: translate(0);
     opacity: 1;
     background-color: transparent;
-    width: 60%;
+    width: 100%;
     height: auto;
   }
   .page-header .main-nav__list li {
     padding: 0;
     width: auto;
+  }
+  .page-header .main-nav__list-wrapper {
+    width: 60%;
   }
   .page-header .main-nav__links {
     color: #111111;
@@ -691,6 +694,126 @@ footer .logo img {
   }
   .advantages .wrap .advantage p {
     width: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .page-header {
+    height: auto;
+    position: relative;
+  }
+  .page-header .main-nav {
+    height: 10rem;
+  }
+  .page-header .main-nav__list-wrapper {
+    width: 50%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: #68b738 url(../img/index-background-desktop.jpg) no-repeat center center/cover;
+  }
+  .page-header .main-nav__list {
+    width: 70%;
+    margin: auto;
+    height: 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page-header .main-nav__links {
+    color: #eee;
+  }
+  .page-header .section__content {
+    width: 50%;
+    margin: 0;
+  }
+  .page-header .section__button {
+    width: 30%;
+    left: 25%;
+  }
+  .page-header .section__img {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    top: 10%;
+    left: 60%;
+    width: 100%;
+  }
+  .ads {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+  }
+  .ads__ad {
+    padding: 10%;
+  }
+  .ads .ad__img {
+    width: 100px;
+    height: 100px;
+  }
+  .ads .ad__img img {
+    width: 90px;
+    height: 90px;
+  }
+  .ads .ad__title {
+    left: 150%;
+  }
+  .advantages .wrap {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .examples {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .examples .content .money {
+    width: 90%;
+    margin: auto;
+  }
+  .examples .content .money h3 {
+    margin-right: 0;
+  }
+  .address {
+    position: relative;
+  }
+  .address__content {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-color: #eee;
+    z-index: 100;
+    padding: 5%;
+    width: 40%;
+    height: 50%;
+  }
+  .address__map {
+    height: 400px;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1% 5%;
+  }
+  footer * {
+    border: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

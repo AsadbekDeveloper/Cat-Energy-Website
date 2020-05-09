@@ -442,11 +442,14 @@ footer{
         transform: translate(0);
         opacity: 1;
         background-color: transparent;
-        width: 60%;
+        width: 100%;
         height: auto;
         li{
           padding: 0;
           width: auto;
+        }
+        &-wrapper{
+          width: 60%;
         }
       }
       &__links{
@@ -492,6 +495,112 @@ footer{
           width: auto;
         }
       }
+    }
+  }
+}
+
+//Media query for desktop version
+
+@media (min-width: 1000px){
+  .page-header{
+    height: auto;
+    position: relative;
+    .main-nav{
+      height: 10rem;
+      &__list-wrapper{
+        width: 50%;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background: $green url(../img/index-background-desktop.jpg) no-repeat center center/cover;
+      }
+      &__list{
+        width: 70%;
+        margin: auto;
+        height: 10rem;
+        @include flex(space-between, center)
+      }
+      &__links{
+        color: $text-white;
+      }
+    }
+    .section{
+      &__content{
+        width: 50%;
+        margin: 0;
+      }
+      &__button{
+        width: 30%;
+        left: 25%;
+      }
+      &__img{
+        transform: translate(0);
+        top: 10%;
+        left: 60%;
+        width: 100%;
+      }
+    }
+  }
+  .ads{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    &__ad{
+      padding: 10%;
+    }
+    .ad__img{
+      width: 100px;
+      height: 100px;
+      img{
+        width: 90px;
+        height: 90px;
+      }
+    }
+    .ad__title{
+        left: 150%;
+    }
+  }
+  .advantages{
+    .wrap{
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .examples{
+    grid-template-columns: 1fr 1fr;
+    .content{
+      .money{
+        width: 90%;
+        margin: auto;
+        h3{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .address{
+    position: relative;
+    &__content{
+      position: absolute;
+      left: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $text-white;
+      z-index: 100;
+      padding: 5%;
+      width: 40%;
+      height: 50%;
+    }
+    &__map{
+      height: 400px;
+    }
+  }
+  footer{
+    @include flex();
+    padding: 1% 5%;
+    *{
+      border: 0;
     }
   }
 }
