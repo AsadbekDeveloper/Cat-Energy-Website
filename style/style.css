@@ -51,7 +51,7 @@ img {
 }
 
 .page-header .main-nav__logo-img {
-  width: 60px;
+  width: 38px;
 }
 
 .page-header .main-nav .fade {
@@ -623,8 +623,17 @@ footer .logo img {
 }
 
 @media (min-width: 600px) {
+  .page-header .main-nav {
+    height: 8rem;
+  }
   .page-header .main-nav__logo {
     width: auto;
+  }
+  .page-header .main-nav__logo h1 {
+    display: none;
+  }
+  .page-header .main-nav__logo-img {
+    width: 173px;
   }
   .page-header .main-nav__list {
     position: static;
@@ -704,6 +713,9 @@ footer .logo img {
   }
   .page-header .main-nav {
     height: 10rem;
+  }
+  .page-header .main-nav__logo-img {
+    width: 202px;
   }
   .page-header .main-nav__list-wrapper {
     width: 50%;

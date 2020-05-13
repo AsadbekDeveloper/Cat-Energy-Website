@@ -56,7 +56,7 @@ img{
       width: 60%;
       @include flex();
       &-img{
-        width: 60px;
+        width: 38px;
       }
     }
     .fade{
@@ -432,8 +432,15 @@ footer{
 @media (min-width: 600px){
   .page-header{
     .main-nav{
+      height: 8rem;
       &__logo{
         width: auto;
+        h1{
+          display: none;
+        }
+        &-img{
+          width: 173px;
+        }
       }
       &__list{
         position: static;
@@ -507,6 +514,9 @@ footer{
     position: relative;
     .main-nav{
       height: 10rem;
+      &__logo-img{
+        width: 202px;
+      }
       &__list-wrapper{
         width: 50%;
         position: absolute;
